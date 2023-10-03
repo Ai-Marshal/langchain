@@ -849,7 +849,7 @@ class Redis(VectorStore):
             doc = Document(page_content=result.content, metadata=metadata)
             distance = self._calculate_fp_distance(result.distance)
             docs_with_scores.append((doc, distance))
-        print("Ai-Marshal..............")
+        print("Ai-Marshal..............testing this function")
         return docs_with_scores
 
     def similarity_search(
