@@ -804,6 +804,7 @@ class Redis(VectorStore):
                 "Please install it with `pip install redis`."
             ) from e
 
+        print("\n\t\t\t1. Ai-Marshal..............")
         if "score_threshold" in kwargs:
             logger.warning(
                 "score_threshold is deprecated. Use distance_threshold instead."
@@ -848,7 +849,7 @@ class Redis(VectorStore):
             doc = Document(page_content=result.content, metadata=metadata)
             distance = self._calculate_fp_distance(result.distance)
             docs_with_scores.append((doc, distance))
-
+        print("Ai-Marshal..............")
         return docs_with_scores
 
     def similarity_search(
